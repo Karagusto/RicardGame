@@ -13,7 +13,7 @@ display_width = 800
 display_height = 600
 
 gameDisplay = pygame.display.set_mode((display_width, display_height))
-pygame.display.set_caption('Alien Attack')
+pygame.display.set_caption('Snake')
 
 gameExit = False
 
@@ -26,6 +26,14 @@ clock = pygame.time.Clock()
 
 block_size = 10
 FPS = 30
+
+font = pygame.font.SysFont(None, 25)
+
+
+def message_to_screen(msg, color):
+    screen_text = font.render(msg, True, color)
+    gameDisplay.blit(screen_text, [display_width/2, display_height/2])
+
 
 while not gameExit:
     for event in pygame.event.get():
