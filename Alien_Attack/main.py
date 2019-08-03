@@ -1,4 +1,5 @@
 import pygame
+import random
 
 pygame.init()
 
@@ -99,7 +100,7 @@ class enemy(object):
 bgnd = background(500, 480)
 win = bgnd.drawBackground()
 man = player(200, 410, 64, 64)
-goblin = enemy(200, 50, 64, 64, 480)
+goblin = enemy(200, 0, 64, 64, 480)
 # bullet = projectile(round(man.x + man.width/2), man.y, 3, (255, 0, 0))
 
 
@@ -114,7 +115,8 @@ char = pygame.image.load('Game/standing.png')
 # bg = pygame.image.load('Game/space_invaders_background.gif')
 
 clock = pygame.time.Clock()
-
+bullets = []
+enemies = []
 
 def redrawGameWindow():
     win.blit(bg, (0, 0))
@@ -126,7 +128,7 @@ def redrawGameWindow():
     pygame.display.update()
 
 
-bullets = []
+
 run = True
 while run:
     clock.tick(27)

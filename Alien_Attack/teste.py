@@ -1,4 +1,6 @@
 import pygame
+import numpy as np
+import random
 
 pygame.init()
 
@@ -10,7 +12,7 @@ class background(object):
 
     def drawBackground(self):
         win = pygame.display.set_mode((500, 480))
-        pygame.display.set_caption("First Game")
+        pygame.display.set_caption("Alien Attack 0.0.1")
         return win
 
 
@@ -95,18 +97,18 @@ class enemy(object):
                 self.walkCount = 0
         pass
 
+## Continuar implmentando inimigo para ir na lista e desaparecer
+class AlienEnemy(object):
+    enemySprite = [pygame.image.load('Game/invader.gif')]
+
 
 bgnd = background(500, 480)
 win = bgnd.drawBackground()
 man = player(200, 410, 64, 64)
-goblin = enemy(200, 50, 64, 64, 480)
-# bullet = projectile(round(man.x + man.width/2), man.y, 3, (255, 0, 0))
+goblin = enemy(random.randrange(70, 420), -70, 64, 64, 550)
 
 
-# walkRight = [pygame.image.load('Game/R1.png'), pygame.image.load('Game/R2.png'), pygame.image.load('Game/R3.png'), pygame.image.load('Game/R4.png'), pygame.image.load('Game/R5.png'), pygame.image.load('Game/R6.png'), pygame.image.load('Game/R7.png'), pygame.image.load('Game/R8.png'), pygame.image.load('Game/R9.png')]
-# walkLeft = [pygame.image.load('Game/L1.png'), pygame.image.load('Game/L2.png'), pygame.image.load('Game/L3.png'), pygame.image.load('Game/L4.png'), pygame.image.load('Game/L5.png'), pygame.image.load('Game/L6.png'), pygame.image.load('Game/L7.png'), pygame.image.load('Game/L8.png'), pygame.image.load('Game/L9.png')]
-# bg = pygame.image.load('Game/bg.jpg')
-# char = pygame.image.load('Game/standing.png')
+
 
 walkRight = [pygame.image.load('Game/ally.gif')]
 walkLeft = [pygame.image.load('Game/ally.gif')]
