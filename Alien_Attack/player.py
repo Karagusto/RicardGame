@@ -41,22 +41,9 @@ class player(object):
         else:
             win.blit(char, (self.x, self.y))
 
-class projectile(object):
-    def __init__(self, x, y, radius, color):
-        self.x = x
-        self.y = y
-        self.radius = radius
-        self.color = color
-        # self.facing = facing
-        # self.vel = 8 * facing
-
-    def draw(self, win):
-        pygame.draw.circle(win, self.color, (self.x, self.y), self.radius)
-
 
 bgnd = background(500, 480)
 win = bgnd.drawBackground()
-
 
 
 walkRight = [pygame.image.load('Game/R1.png'), pygame.image.load('Game/R2.png'), pygame.image.load('Game/R3.png'), pygame.image.load('Game/R4.png'), pygame.image.load('Game/R5.png'), pygame.image.load('Game/R6.png'), pygame.image.load('Game/R7.png'), pygame.image.load('Game/R8.png'), pygame.image.load('Game/R9.png')]
@@ -75,7 +62,6 @@ def redrawGameWindow():
 
 # mainloop
 man = player(200, 410, 64, 64)
-bullets = []
 run = True
 while run:
     clock.tick(27)
@@ -83,17 +69,8 @@ while run:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
-    for bullet in bullets:
-        if bullets.x < 500 and bullets.x    > 0:
-            bullets.y += bullets.vel
-        else:
-            bullets.pop(bullets.index(bullet))
 
     keys = pygame.key.get_pressed()
-
-    if keys[pygame.K_SPACE]:
-        if len(bullets) < 5:
-            bullets.append(projectile(round(man.x + man.width // 2), round(man.y + man.height // 2), 6, (0, 0, 0) ))
 
     if keys[pygame.K_LEFT] and man.x > man.vel:
         man.x -= man.vel
@@ -109,7 +86,7 @@ while run:
         man.walkCount = 0
 
     if not (man.isJump):
-        if keys[pygame.K_UP]:
+        if keys[pygame.K_SPACE]:
             man.isJump = True
             man.right = False
             man.left = False
