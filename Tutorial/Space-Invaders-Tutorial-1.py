@@ -32,13 +32,4 @@ player.setposition(0, -250)
 player.setheading(90)
 
 
-
-
-
-
-
-
-
-
-
-delay = raw_input("Press enter to finsh.")
+delay = input("Press enter to finsh.")
