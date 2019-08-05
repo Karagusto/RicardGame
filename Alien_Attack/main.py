@@ -28,6 +28,7 @@ class player(object):
         self.walkCount = 0
         self.jumpCount = 10
         self.standing = True
+        self.hitbox = (self.x + 15, self.y + 10, self.width//2, self.height)
 
     def draw(self, win):
         if self.walkCount + 1 >= 1:
@@ -42,7 +43,12 @@ class player(object):
                 self.walkCount += 1
         else:
             win.blit(char, (self.x, self.y))
+        self.hitbox = (self.x + 15, self.y + 10, self.width//2, self.height)
+        pygame.draw.rect(win, (255, 0, 0), self.hitbox, 2)
 
+    def hit(self):
+        print("hit")
+        pass
 
 class projectile(object):
     def __init__(self, x, y, radius, color):
@@ -52,9 +58,12 @@ class projectile(object):
         self.color = color
         # self.facing = facing
         self.vel = 8
+        self.hitbox = (self.x - 20, self.y - 20, 20, 20)
 
     def draw(self, win):
         pygame.draw.circle(win, self.color, (self.x, self.y), self.radius)
+        self.hitbox = (self.x - 10, self.y - 10, 20, 20)
+        pygame.draw.rect(win, self.color, self.hitbox, 2)
 
 class enemy(object):
     enemySprite = [pygame.image.load('Game/invader.gif')]
@@ -68,6 +77,7 @@ class enemy(object):
         self.path = [self.y, self.end]
         self.walkCount = 0
         self.vel = 3
+        self.hitbox = (self.x, self.y, self.width//2, self.height//2)
 
     def draw(self, win):
         self.move()
@@ -79,6 +89,8 @@ class enemy(object):
         else:
             win.blit(self.enemySprite[self.walkCount // 3], (self.x, self.y))
             self.walkCount += 1
+        self.hitbox = (self.x, self.y, self.width//2 - 10, self.height//2 - 10)
+        pygame.draw.rect(win, (255, 0, 0), self.hitbox, 2)
         pass
 
     def move(self):
@@ -95,6 +107,26 @@ class enemy(object):
                 self.vel = self.vel * -1
                 self.walkCount = 0
         pass
+
+    def hit(self):
+        print("hit")
+        pass
+
+
+#Class for collision development
+class collision(object):
+
+    def __init__(self, hitbox1, hitbox2):
+        self.hitbox1 = hitbox1
+        self.hitbox2 = hitbox2
+
+    def isCollidingEnemy(self, hitbox1, hitbox2):
+        if hitbox1[1] - hitbox1[3] < hitbox2[1] + hitbox2[3] and hitbox1[1] + hitbox1[3] > hitbox2[1]:
+            if hitbox1[0] + hitbox1[2] > hitbox2[0] and hitbox1[0] - hitbox1[2]  < hitbox2[0] + hitbox2[2]:
+                print("HIT")
+
+    def isCollidingBullet(self, hitbox, ):
+
 
 
 bgnd = background(500, 480)
@@ -124,7 +156,6 @@ def redrawGameWindow():
     goblin.draw(win)
     for bullet in bullets:
         bullet.draw(win)
-
     pygame.display.update()
 
 
@@ -132,16 +163,19 @@ def redrawGameWindow():
 run = True
 while run:
     clock.tick(27)
+    keys = pygame.key.get_pressed()
+
     for event in pygame.event.get():
-        if event.type == pygame.QUIT:
+        if event.type == pygame.QUIT or keys[pygame.K_q]:
             run = False
     for bullet in bullets:
+
         if bullet.y < 500 and bullet.y > 0:
             bullet.y -= bullet.vel
         else:
             bullets.pop(bullets.index(bullet))
 
-    keys = pygame.key.get_pressed()
+
 
     if keys[pygame.K_SPACE]:
         if len(bullets) < 1:
