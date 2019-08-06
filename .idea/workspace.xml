@@ -19,11 +19,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Alien_Attack/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="181" column="47" selection-start-line="181" selection-start-column="47" selection-end-line="181" selection-end-column="47" />
+            <state relative-caret-position="-536">
+              <caret line="125" column="155" selection-start-line="125" selection-start-column="155" selection-end-line="125" selection-end-column="155" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scene7.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="434">
+              <caret line="127" column="8" lean-forward="true" selection-start-line="127" selection-start-column="8" selection-end-line="129" selection-end-column="166" />
             </state>
           </provider>
         </entry>
@@ -65,6 +74,7 @@
       <find>all_sprites_list</find>
       <find>move</find>
       <find>bullet</find>
+      <find>enemy</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -114,6 +124,11 @@
               <item name="RicardGame" type="b2602c69:ProjectViewProjectNode" />
               <item name="RicardGame" type="462c0819:PsiDirectoryNode" />
               <item name="Alien_Attack" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RicardGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RicardGame" type="462c0819:PsiDirectoryNode" />
+              <item name="Tutorial" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -289,12 +304,12 @@
       <workItem from="1563904072152" duration="19109000" />
       <workItem from="1564165710944" duration="5876000" />
       <workItem from="1564585507052" duration="22854000" />
-      <workItem from="1565088525849" duration="960000" />
+      <workItem from="1565088525849" duration="2937000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48799000" />
+    <option name="totallyTimeSpent" value="50776000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1985" y="-4" width="2495" height="1084" extended-state="6" />
@@ -329,7 +344,7 @@
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/RicardGame$main.coverage" NAME="main Coverage Results" MODIFIED="1565089665931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Alien_Attack" />
+    <SUITE FILE_PATH="coverage/RicardGame$main.coverage" NAME="main Coverage Results" MODIFIED="1565091406615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Alien_Attack" />
     <SUITE FILE_PATH="coverage/RicardGame$scene7.coverage" NAME="scene7 Coverage Results" MODIFIED="1564841748514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RicardGame$scene4.coverage" NAME="scene4 Coverage Results" MODIFIED="1563980112598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RicardGame$spacegame.coverage" NAME="spacegame Coverage Results" MODIFIED="1563905374188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SpaceExplorer-0.31" />
@@ -381,13 +396,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Space-Invaders/space.py" />
-    <entry file="file://$PROJECT_DIR$/Tutorial/Space-Invaders-Tutorial-1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scene1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -399,13 +407,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scene7.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="102" column="8" selection-start-line="102" selection-start-column="8" selection-end-line="103" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -454,10 +455,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Tutorial/Space-Invaders-Tutorial-1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scene7.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="127" column="8" lean-forward="true" selection-start-line="127" selection-start-column="8" selection-end-line="129" selection-end-column="166" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Alien_Attack/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="181" column="47" selection-start-line="181" selection-start-column="47" selection-end-line="181" selection-end-column="47" />
+        <state relative-caret-position="-536">
+          <caret line="125" column="155" selection-start-line="125" selection-start-column="155" selection-end-line="125" selection-end-column="155" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

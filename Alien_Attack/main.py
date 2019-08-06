@@ -123,14 +123,19 @@ class collision(object):
         self.projectile = projectile
 
     def isCollidingEnemy(self, hitbox1, hitbox2):
-        if hitbox1[1] - hitbox1[3] < hitbox2[1] + hitbox2[3] and hitbox1[1] + hitbox1[3] > hitbox2[1]:
-            if hitbox1[0] + hitbox1[2] > hitbox2[0] and hitbox1[0] - hitbox1[2] < hitbox2[0] + hitbox2[2]:
-                print("HIT")
-
-    def isCollidingBullet(self, hitbox, projectile):
-        if hitbox[1] - hitbox[3] < projectile.y + projectile.radius and hitbox[1] + hitbox[3] > projectile.y:
-            if hitbox[0] + hitbox[2] > projectile.x and hitbox[0] - hitbox[2] < projectile.x + projectile.radius:
+        if self.hitbox1[0] > self.hitbox2[0] and self.hitbox1[0] < self.hitbox2[0] + self.hitbox2[2] or self.hitbox1[0] + self.hitbox1[2] > self.hitbox2[0]:
+            if hitbox1[1] > hitbox2[1] and hitbox1[1] < hitbox2[1] + hitbox2[3] or hitbox1[1] + hitbox1[3] > hitbox2[1] and hitbox1[1] + hitbox1[3] < hitbox2[1] + hitbox2[3]:
+                print("xandycrossover")
                 return 0
+
+    def isCollidingBullet(self):
+        if self.hitbox[1] - self.hitbox[3] < self.projectile.y + self.projectile.radius and self.hitbox[1] + self.hitbox[3] > self.projectile.y:
+            if self.hitbox[0] + self.hitbox[2] > self.projectile.x and self.hitbox[0] - self.hitbox[2] < self.projectile.x + self.projectile.radius:
+                return 0
+    #
+    # if lead_x > randAppleX and lead_x < randAppleX + AppleThickness or lead_x + block_size > randAppleX and lead_x + block_size < randAppleX + AppleThickness:
+    #     # print("x crossover")
+    #     if lead_y > randAppleY and lead_y < randAppleY + AppleThickness or lead_y + block_size > randAppleY and lead_y + block_size < randAppleY + AppleThickness:
 
 
 
@@ -176,17 +181,19 @@ while run:
             run = False
     for bullet in bullets:
         col = collision(0, 0, goblin.hitbox, bullet)
+
         if bullet.y < 500 and bullet.y > 0:
             bullet.y -= bullet.vel
-            if collision.isCollidingBullet(col, goblin.hitbox, bullet) == 0:
+            if collision.isCollidingBullet(col) == 0:
                 bullets.pop(bullets.index(bullet))
         else:
             bullets.pop(bullets.index(bullet))
 
-    for enemy in enemies:
-        col = collision(man.hitbox, goblin.hitbox, 0, 0)
-        if collision.isCollidingEnemy(man.hitbox, goblin.hitbox, 0, 0):
-            print("Hit")
+    # for alien in enemies:
+    alien = goblin
+    col2 = collision(man.hitbox, alien.hitbox, 0, 0)
+    if collision.isCollidingEnemy(col2, man.hitbox, alien.hitbox) == 0:
+        print("Hit")
 
 
 
