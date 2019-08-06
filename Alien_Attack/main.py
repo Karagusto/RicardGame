@@ -123,8 +123,9 @@ class collision(object):
         self.projectile = projectile
 
     def isCollidingEnemy(self, hitbox1, hitbox2):
-        if self.hitbox1[0] > self.hitbox2[0] and self.hitbox1[0] < self.hitbox2[0] + self.hitbox2[2] or self.hitbox1[0] + self.hitbox1[2] > self.hitbox2[0]:
-            if hitbox1[1] > hitbox2[1] and hitbox1[1] < hitbox2[1] + hitbox2[3] or hitbox1[1] + hitbox1[3] > hitbox2[1] and hitbox1[1] + hitbox1[3] < hitbox2[1] + hitbox2[3]:
+        if self.hitbox1[0] > self.hitbox2[0] and self.hitbox1[0] < self.hitbox2[0] + self.hitbox2[2] or self.hitbox1[0] + self.hitbox1[2] > self.hitbox2[0] and self.hitbox1[0] + self.hitbox1[2] < self.hitbox2[0] + self.hitbox2[2]:
+            print("xcrossover")
+            if self.hitbox1[1] > self.hitbox2[1] and self.hitbox1[1] < self.hitbox2[1] + self.hitbox2[3] or self.hitbox1[1] + self.hitbox1[3] > self.hitbox2[1] and self.hitbox1[1] + self.hitbox1[3] < self.hitbox2[1] + self.hitbox2[3]:
                 print("xandycrossover")
                 return 0
 
@@ -191,7 +192,7 @@ while run:
 
     # for alien in enemies:
     alien = goblin
-    col2 = collision(man.hitbox, alien.hitbox, 0, 0)
+    col2 = collision(alien.hitbox, man.hitbox, 0, 0)
     if collision.isCollidingEnemy(col2, man.hitbox, alien.hitbox) == 0:
         print("Hit")
 
