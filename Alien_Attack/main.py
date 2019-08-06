@@ -116,16 +116,21 @@ class enemy(object):
 #Class for collision development
 class collision(object):
 
-    def __init__(self, hitbox1, hitbox2):
+    def __init__(self, hitbox1, hitbox2, hitbox, projectile):
         self.hitbox1 = hitbox1
         self.hitbox2 = hitbox2
+        self.hitbox = hitbox
+        self.projectile = projectile
 
     def isCollidingEnemy(self, hitbox1, hitbox2):
         if hitbox1[1] - hitbox1[3] < hitbox2[1] + hitbox2[3] and hitbox1[1] + hitbox1[3] > hitbox2[1]:
-            if hitbox1[0] + hitbox1[2] > hitbox2[0] and hitbox1[0] - hitbox1[2]  < hitbox2[0] + hitbox2[2]:
+            if hitbox1[0] + hitbox1[2] > hitbox2[0] and hitbox1[0] - hitbox1[2] < hitbox2[0] + hitbox2[2]:
                 print("HIT")
 
-    # def isCollidingBullet(self, hitbox, ):
+    def isCollidingBullet(self, hitbox, projectile):
+        if hitbox[1] - hitbox[3] < projectile.y + projectile.radius and hitbox[1] + hitbox[3] > projectile.y:
+            if hitbox[0] + hitbox[2] > projectile.x and hitbox[0] - hitbox[2] < projectile.x + projectile.radius:
+                return 0
 
 
 
@@ -165,15 +170,23 @@ while run:
     clock.tick(27)
     keys = pygame.key.get_pressed()
 
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT or keys[pygame.K_q]:
             run = False
     for bullet in bullets:
-
+        col = collision(0, 0, goblin.hitbox, bullet)
         if bullet.y < 500 and bullet.y > 0:
             bullet.y -= bullet.vel
+            if collision.isCollidingBullet(col, goblin.hitbox, bullet) == 0:
+                bullets.pop(bullets.index(bullet))
         else:
             bullets.pop(bullets.index(bullet))
+
+    for enemy in enemies:
+        col = collision(man.hitbox, goblin.hitbox, 0, 0)
+        if collision.isCollidingEnemy(man.hitbox, goblin.hitbox, 0, 0):
+            print("Hit")
 
 
 
