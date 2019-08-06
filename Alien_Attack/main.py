@@ -10,9 +10,12 @@ class background(object):
         self. screenheight = screenheight
 
     def drawBackground(self):
-        win = pygame.display.set_mode((500, 480))
-        pygame.display.set_caption("First Game")
+        win = pygame.display.set_mode((self.screenwidth, self.screenheight))
+        pygame.display.set_caption("Space Invaders")
         return win
+
+    # def drawStartScreen(self):
+
 
 
 class player(object):
@@ -124,9 +127,9 @@ class collision(object):
 
     def isCollidingEnemy(self, hitbox1, hitbox2):
         if self.hitbox1[0] > self.hitbox2[0] and self.hitbox1[0] < self.hitbox2[0] + self.hitbox2[2] or self.hitbox1[0] + self.hitbox1[2] > self.hitbox2[0] and self.hitbox1[0] + self.hitbox1[2] < self.hitbox2[0] + self.hitbox2[2]:
-            print("xcrossover")
+            #print("xcrossover")
             if self.hitbox1[1] > self.hitbox2[1] and self.hitbox1[1] < self.hitbox2[1] + self.hitbox2[3] or self.hitbox1[1] + self.hitbox1[3] > self.hitbox2[1] and self.hitbox1[1] + self.hitbox1[3] < self.hitbox2[1] + self.hitbox2[3]:
-                print("xandycrossover")
+                #print("xandycrossover")
                 return 0
 
     def isCollidingBullet(self):
@@ -140,10 +143,7 @@ class collision(object):
 
 
 
-bgnd = background(500, 480)
-win = bgnd.drawBackground()
-man = player(200, 410, 64, 64)
-goblin = enemy(200, 0, 64, 64, 480)
+
 # bullet = projectile(round(man.x + man.width/2), man.y, 3, (255, 0, 0))
 
 
@@ -156,12 +156,27 @@ char = pygame.image.load('Game/standing.png')
 # walkLeft = [pygame.image.load('Game/ally.gif')]
 # char = pygame.image.load('Game/ally.gif')
 # bg = pygame.image.load('Game/space_invaders_background.gif')
-
+font = pygame.font.SysFont(None, 25)
 clock = pygame.time.Clock()
-bullets = []
-enemies = []
 
-def redrawGameWindow():
+
+# object for texts
+def text_objects(text, color):
+    textSurface = font.render(text, True, color)
+    return textSurface, textSurface.get_rect()
+
+
+# display message to screen
+def message_to_screen(msg, color, bgnd, win):
+    textSurface, textRect = text_objects(msg, color)
+
+    # screen_text = font.render(msg, True, color)
+    # gameDisplay.blit(screen_text, [display_width / 2, display_height / 2])
+    textRect.center = (bgnd.screenwidth/2), (bgnd.screenheight/2)
+    win.blit(textSurface, textRect)
+
+
+def redrawGameWindow(win, man, goblin, bullets):
     win.blit(bg, (0, 0))
     man.draw(win)
     goblin.draw(win)
@@ -170,69 +185,182 @@ def redrawGameWindow():
     pygame.display.update()
 
 
+def game_loop():
 
-run = True
-while run:
-    clock.tick(27)
-    keys = pygame.key.get_pressed()
+    gameExit = False
+    gameOver = False
+
+    bullets = []
+    enemies = []
+
+    bgnd = background(500, 480)
+    win = bgnd.drawBackground()
+    man = player(200, 410, 64, 64)
+    goblin = enemy(200, 0, 64, 64, 480)
 
 
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT or keys[pygame.K_q]:
-            run = False
-    for bullet in bullets:
-        col = collision(0, 0, goblin.hitbox, bullet)
 
-        if bullet.y < 500 and bullet.y > 0:
-            bullet.y -= bullet.vel
-            if collision.isCollidingBullet(col) == 0:
+
+    while not gameExit:
+        keys = pygame.key.get_pressed()
+
+        while gameOver == True:
+            win.fill((255, 255, 255))
+            message_to_screen("Game Over, press C to play again or Q to quit", (255, 0, 0), bgnd, win)
+            pygame.display.update()
+
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    gameExit = True
+                    gameOver = False
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_q:
+                        gameExit = True
+                        gameOver = False
+                    if event.key == pygame.K_c:
+                        game_loop()
+
+
+
+
+        for event in pygame.event.get():
+            print(event)
+            if event.type == pygame.QUIT or keys[pygame.K_q]:
+                gameExit = True
+        for bullet in bullets:
+            col = collision(0, 0, goblin.hitbox, bullet)
+
+            if bullet.y < 500 and bullet.y > 0:
+                bullet.y -= bullet.vel
+                if collision.isCollidingBullet(col) == 0:
+                    bullets.pop(bullets.index(bullet))
+            else:
                 bullets.pop(bullets.index(bullet))
-        else:
-            bullets.pop(bullets.index(bullet))
 
-    # for alien in enemies:
-    alien = goblin
-    col2 = collision(alien.hitbox, man.hitbox, 0, 0)
-    if collision.isCollidingEnemy(col2, man.hitbox, alien.hitbox) == 0:
-        print("Hit")
-
+        # for alien in enemies:
+        alien = goblin
+        col2 = collision(alien.hitbox, man.hitbox, 0, 0)
+        if collision.isCollidingEnemy(col2, man.hitbox, alien.hitbox) == 0:
+            print("Hit")
+            gameOver = True
 
 
-    if keys[pygame.K_SPACE]:
-        if len(bullets) < 1:
-            bullets.append(projectile(round(man.x + man.width//2), round(man.y + man.height//2), 6, (0, 0, 0)))
 
-    if keys[pygame.K_LEFT] and man.x > man.vel:
-        man.x -= man.vel
-        man.left = True
-        man.right = False
-        man.standing = False
-    elif keys[pygame.K_RIGHT] and man.x < 500 - man.width - man.vel:
-        man.x += man.vel
-        man.right = True
-        man.left = False
-        man.standing = False
-    else:
-        man.standing = True
-        man.walkCount = 0
 
-    if not (man.isJump):
-        if keys[pygame.K_UP]:
-            man.isJump = True
+        if keys[pygame.K_SPACE]:
+            if len(bullets) < 1:
+                bullets.append(projectile(round(man.x + man.width//2), round(man.y + man.height//2), 6, (0, 0, 0)))
+
+        if keys[pygame.K_LEFT] and man.x > man.vel:
+            man.x -= man.vel
+            man.left = True
             man.right = False
+            man.standing = False
+        elif keys[pygame.K_RIGHT] and man.x < 500 - man.width - man.vel:
+            man.x += man.vel
+            man.right = True
             man.left = False
-            man.walkCount = 0
-    else:
-        if man.jumpCount >= -10:
-            neg = 1
-            if man.jumpCount < 0:
-                neg = -1
-            man.y -= (man.jumpCount ** 2) * 0.5 * neg
-            man.jumpCount -= 1
+            man.standing = False
         else:
-            man.isJump = False
-            man.jumpCount = 10
+            man.standing = True
+            man.walkCount = 0
 
-    redrawGameWindow()
+        if not (man.isJump):
+            if keys[pygame.K_UP]:
+                man.isJump = True
+                man.right = False
+                man.left = False
+                man.walkCount = 0
+        else:
+            if man.jumpCount >= -10:
+                neg = 1
+                if man.jumpCount < 0:
+                    neg = -1
+                man.y -= (man.jumpCount ** 2) * 0.5 * neg
+                man.jumpCount -= 1
+            else:
+                man.isJump = False
+                man.jumpCount = 10
 
-pygame.quit()
+        clock.tick(30)
+        redrawGameWindow(win, man, goblin, bullets)
+
+    # while run:
+    #     clock.tick(27)
+    #     keys = pygame.key.get_pressed()
+    #
+    #     for event in pygame.event.get():
+    #         if event.type == pygame.QUIT or keys[pygame.K_q]:
+    #             run = False
+    #     while gameOver == True:
+    #         win.fill((255, 255, 255))
+    #         message_to_screen("Game Over, press C to play again or Q to quit", (255, 0, 0))
+    #         pygame.display.update()
+    #         for event2 in pygame.event.get():
+    #             if event2.type == pygame.QUIT or keys[pygame.K_q]:
+    #                 run = False
+    #                 gameOver = False
+    #             if event2.type == keys[pygame.K_c]:
+    #                 gameOver = False
+    #                 game_loop()
+    #     for bullet in bullets:
+    #         col = collision(0, 0, goblin.hitbox, bullet)
+    #
+    #         if bullet.y < 500 and bullet.y > 0:
+    #             bullet.y -= bullet.vel
+    #             if collision.isCollidingBullet(col) == 0:
+    #                 bullets.pop(bullets.index(bullet))
+    #         else:
+    #             bullets.pop(bullets.index(bullet))
+    #
+    #     # for alien in enemies:
+    #     alien = goblin
+    #     col2 = collision(alien.hitbox, man.hitbox, 0, 0)
+    #     if collision.isCollidingEnemy(col2, man.hitbox, alien.hitbox) == 0:
+    #         print("Hit")
+    #         gameOver = True
+    #
+    #
+    #
+    #
+    #     if keys[pygame.K_SPACE]:
+    #         if len(bullets) < 1:
+    #             bullets.append(projectile(round(man.x + man.width//2), round(man.y + man.height//2), 6, (0, 0, 0)))
+    #
+    #     if keys[pygame.K_LEFT] and man.x > man.vel:
+    #         man.x -= man.vel
+    #         man.left = True
+    #         man.right = False
+    #         man.standing = False
+    #     elif keys[pygame.K_RIGHT] and man.x < 500 - man.width - man.vel:
+    #         man.x += man.vel
+    #         man.right = True
+    #         man.left = False
+    #         man.standing = False
+    #     else:
+    #         man.standing = True
+    #         man.walkCount = 0
+    #
+    #     if not (man.isJump):
+    #         if keys[pygame.K_UP]:
+    #             man.isJump = True
+    #             man.right = False
+    #             man.left = False
+    #             man.walkCount = 0
+    #     else:
+    #         if man.jumpCount >= -10:
+    #             neg = 1
+    #             if man.jumpCount < 0:
+    #                 neg = -1
+    #             man.y -= (man.jumpCount ** 2) * 0.5 * neg
+    #             man.jumpCount -= 1
+    #         else:
+    #             man.isJump = False
+    #             man.jumpCount = 10
+    #
+    #     redrawGameWindow()
+
+    pygame.quit()
+    quit()
+
+game_loop()
