@@ -32,6 +32,8 @@ class player(object):
         self.jumpCount = 10
         self.standing = True
         self.hitbox = (self.x + 15, self.y + 10, self.width//2, self.height)
+        self.health = 10
+        self.visible = True
 
     def draw(self, win):
         if self.walkCount + 1 >= 1:
@@ -48,10 +50,19 @@ class player(object):
             win.blit(char, (self.x, self.y))
         self.hitbox = (self.x + 5, self.y, self.width//2 - 7, self.height//2)
         #pygame.draw.rect(win, (255, 0, 0), self.hitbox, 2)
-
+        pygame.draw.rect(win, (255, 0, 0), (self.hitbox[0], self.hitbox[1] - 20, 50, 10))
+        pygame.draw.rect(win, (0, 255, 0), (self.hitbox[0], self.hitbox[1] - 20, 50 - ((50/10) * (10 - self.health)), 10))
     def hit(self):
+        if self.health > 0:
+            self.health -= 1
+            return self.health
+        else:
+            self.visible = False
+            return self.health
         print("hit")
-        pass
+
+    def score(self):
+        return 10
 
 class projectile(object):
     def __init__(self, x, y, radius, color):
@@ -81,20 +92,23 @@ class enemy(object):
         self.walkCount = 0
         self.vel = 3
         self.hitbox = (self.x, self.y, self.width//2, self.height//2)
+        self.health = 1
+        self.visible = True
 
     def draw(self, win):
         self.move()
-        if self.walkCount + 1 >= 1:
-            self.walkCount = 0
-        if self.vel > 0:
-            win.blit(self.enemySprite[self.walkCount//3], (self.x, self.y))
-            self.walkCount += 1
-        else:
-            win.blit(self.enemySprite[self.walkCount // 3], (self.x, self.y))
-            self.walkCount += 1
-        self.hitbox = (self.x, self.y, self.width//2 - 10, self.height//2 - 10)
-        #pygame.draw.rect(win, (255, 0, 0), self.hitbox, 2)
-        pass
+        if self.visible:
+            if self.walkCount + 1 >= 1:
+                self.walkCount = 0
+            if self.vel > 0:
+                win.blit(self.enemySprite[self.walkCount//3], (self.x, self.y))
+                self.walkCount += 1
+            else:
+                win.blit(self.enemySprite[self.walkCount // 3], (self.x, self.y))
+                self.walkCount += 1
+            self.hitbox = (self.x, self.y, self.width//2 - 3, self.height//2 - 3)
+            #pygame.draw.rect(win, (255, 0, 0), self.hitbox, 2)
+            pass
 
     def move(self):
         if self.vel > 0:
@@ -112,7 +126,8 @@ class enemy(object):
         pass
 
     def hit(self):
-        print("hit")
+        print("boom!")
+        self.visible = False
         pass
 
 
@@ -126,9 +141,9 @@ class collision(object):
         self.projectile = projectile
 
     def isCollidingEnemy(self, hitbox1, hitbox2):
-        if self.hitbox1[0] > self.hitbox2[0] and self.hitbox1[0] < self.hitbox2[0] + self.hitbox2[2] or self.hitbox1[0] + self.hitbox1[2] > self.hitbox2[0] and self.hitbox1[0] + self.hitbox1[2] < self.hitbox2[0] + self.hitbox2[2]:
+        if self.hitbox1[0] >= self.hitbox2[0] and self.hitbox1[0] < self.hitbox2[0] + self.hitbox2[2] or self.hitbox1[0] + self.hitbox1[2] >= self.hitbox2[0] and self.hitbox1[0] + self.hitbox1[2] < self.hitbox2[0] + self.hitbox2[2]:
             #print("xcrossover")
-            if self.hitbox1[1] > self.hitbox2[1] and self.hitbox1[1] < self.hitbox2[1] + self.hitbox2[3] or self.hitbox1[1] + self.hitbox1[3] > self.hitbox2[1] and self.hitbox1[1] + self.hitbox1[3] < self.hitbox2[1] + self.hitbox2[3]:
+            if self.hitbox1[1] >= self.hitbox2[1] and self.hitbox1[1] < self.hitbox2[1] + self.hitbox2[3] or self.hitbox1[1] + self.hitbox1[3] >= self.hitbox2[1] and self.hitbox1[1] + self.hitbox1[3] < self.hitbox2[1] + self.hitbox2[3]:
                 #print("xandycrossover")
                 return 0
 
@@ -176,34 +191,48 @@ def message_to_screen(msg, color, bgnd, win):
     win.blit(textSurface, textRect)
 
 
-def redrawGameWindow(win, man, goblin, bullets):
+def redrawGameWindow(win, man, goblin, bullets, score, isdead):
     win.blit(bg, (0, 0))
+    text = font.render('Score: ' + str(score), 1, (255, 255, 255))
+    win.blit(text, (390, 10))
     man.draw(win)
     goblin.draw(win)
+
     for bullet in bullets:
         bullet.draw(win)
     pygame.display.update()
 
 
+#goblin = enemy(random.randrange(70, 420), 0, 64, 64, 480)
 def game_loop():
 
     gameExit = False
     gameOver = False
+    isdead = True
     shootLoop = 0
+    score = 0
     bullets = []
     enemies = []
 
     bgnd = background(500, 480)
     win = bgnd.drawBackground()
     man = player(200, 410, 64, 64)
-    goblin = enemy(200, 0, 64, 64, 480)
+    goblin = 0
+
+
 
 
 
 
     while not gameExit:
-        keys = pygame.key.get_pressed()
+        if isdead == True:
+            new_goblin = enemy(random.randrange(70, 420), 0, 64, 64, 480)
+            goblin = new_goblin
+            isdead = False
 
+        keys = pygame.key.get_pressed()
+        #message_to_screen("Score: ", (255, 255, 255), bgnd, win)
+        pygame.display.update()
         while gameOver == True:
             win.fill((255, 255, 255))
             message_to_screen("Game Over, press C to play again or Q to quit", (255, 0, 0), bgnd, win)
@@ -227,9 +256,12 @@ def game_loop():
 
 
         for event in pygame.event.get():
-            print(event)
+            #print(event)
             if event.type == pygame.QUIT or keys[pygame.K_q]:
                 gameExit = True
+        for i in range(1,2):
+            aliens = enemy(random.randrange(70, 420), 0, 64, 64, 480)
+            enemies.append(aliens)
         for bullet in bullets:
             col = collision(0, 0, goblin.hitbox, bullet)
 
@@ -237,6 +269,9 @@ def game_loop():
                 bullet.y -= bullet.vel
                 if collision.isCollidingBullet(col) == 0:
                     bullets.pop(bullets.index(bullet))
+                    alien.hit()
+                    isdead = True
+                    score += man.score()
             else:
                 bullets.pop(bullets.index(bullet))
 
@@ -244,8 +279,11 @@ def game_loop():
         alien = goblin
         col2 = collision(alien.hitbox, man.hitbox, 0, 0)
         if collision.isCollidingEnemy(col2, man.hitbox, alien.hitbox) == 0:
-            print("Hit")
-            gameOver = True
+            health = man.hit()
+            if health > 0:
+                print("zpiurr!")
+            else:
+                gameOver = True
 
 
 
@@ -288,7 +326,7 @@ def game_loop():
                 man.jumpCount = 10
 
         clock.tick(27)
-        redrawGameWindow(win, man, goblin, bullets)
+        redrawGameWindow(win, man, goblin, bullets, score, isdead)
 
     # while run:
     #     clock.tick(27)
