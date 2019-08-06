@@ -125,7 +125,7 @@ class collision(object):
             if hitbox1[0] + hitbox1[2] > hitbox2[0] and hitbox1[0] - hitbox1[2]  < hitbox2[0] + hitbox2[2]:
                 print("HIT")
 
-    def isCollidingBullet(self, hitbox, ):
+    # def isCollidingBullet(self, hitbox, ):
 
 
 
