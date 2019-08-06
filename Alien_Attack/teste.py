@@ -46,8 +46,8 @@ class player(object):
                 self.walkCount += 1
         else:
             win.blit(char, (self.x, self.y))
-        self.hitbox = (self.x + 15, self.y + 10, self.width//2, self.height)
-        pygame.draw.rect(win, (255, 0, 0), self.hitbox, 2)
+        self.hitbox = (self.x + 5, self.y, self.width//2 - 7, self.height//2)
+        #pygame.draw.rect(win, (255, 0, 0), self.hitbox, 2)
 
     def hit(self):
         print("hit")
@@ -66,7 +66,7 @@ class projectile(object):
     def draw(self, win):
         pygame.draw.circle(win, self.color, (self.x, self.y), self.radius)
         self.hitbox = (self.x - 10, self.y - 10, 20, 20)
-        pygame.draw.rect(win, self.color, self.hitbox, 2)
+        #pygame.draw.rect(win, self.color, self.hitbox, 2)
 
 class enemy(object):
     enemySprite = [pygame.image.load('Game/invader.gif')]
@@ -93,7 +93,7 @@ class enemy(object):
             win.blit(self.enemySprite[self.walkCount // 3], (self.x, self.y))
             self.walkCount += 1
         self.hitbox = (self.x, self.y, self.width//2 - 10, self.height//2 - 10)
-        pygame.draw.rect(win, (255, 0, 0), self.hitbox, 2)
+        #pygame.draw.rect(win, (255, 0, 0), self.hitbox, 2)
         pass
 
     def move(self):
@@ -189,7 +189,7 @@ def game_loop():
 
     gameExit = False
     gameOver = False
-
+    shootLoop = 0
     bullets = []
     enemies = []
 
@@ -219,7 +219,10 @@ def game_loop():
                         gameOver = False
                     if event.key == pygame.K_c:
                         game_loop()
-
+        if shootLoop > 0:
+            shootLoop += 1
+        if shootLoop > 3:
+            shootLoop = 0
 
 
 
@@ -247,9 +250,11 @@ def game_loop():
 
 
 
-        if keys[pygame.K_SPACE]:
-            if len(bullets) < 1:
+        if keys[pygame.K_SPACE] and shootLoop == 0:
+            if len(bullets) < 5:
                 bullets.append(projectile(round(man.x + man.width//2), round(man.y + man.height//2), 6, (255, 255, 255)))
+
+            shootLoop = 1
 
         if keys[pygame.K_LEFT] and man.x > man.vel:
             man.x -= man.vel
@@ -282,7 +287,7 @@ def game_loop():
                 man.isJump = False
                 man.jumpCount = 10
 
-        clock.tick(30)
+        clock.tick(27)
         redrawGameWindow(win, man, goblin, bullets)
 
     # while run:

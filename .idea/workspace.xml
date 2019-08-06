@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f88889a-9be4-4a6e-ab42-2ac0994c2e21" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Alien_Attack/teste2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alien_Attack/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Alien_Attack/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alien_Attack/teste.py" beforeDir="false" afterPath="$PROJECT_DIR$/Alien_Attack/teste.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,20 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Alien_Attack/teste.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="709">
-              <caret line="365" column="11" selection-start-line="365" selection-start-column="11" selection-end-line="365" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Alien_Attack/teste2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="709">
-              <caret line="365" column="11" selection-end-line="365" selection-end-column="11" />
+            <state relative-caret-position="495">
+              <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -322,12 +307,12 @@
       <workItem from="1563904072152" duration="19109000" />
       <workItem from="1564165710944" duration="5876000" />
       <workItem from="1564585507052" duration="22854000" />
-      <workItem from="1565088525849" duration="8844000" />
+      <workItem from="1565088525849" duration="9849000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56683000" />
+    <option name="totallyTimeSpent" value="57688000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1985" y="-4" width="2495" height="1084" extended-state="6" />
@@ -400,7 +385,7 @@
     <SUITE FILE_PATH="coverage/RicardGame$teste2.coverage" NAME="teste2 Coverage Results" MODIFIED="1565097382275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RicardGame$scene3.coverage" NAME="scene3 Coverage Results" MODIFIED="1563915475650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RicardGame$scene6.coverage" NAME="scene6 Coverage Results" MODIFIED="1564841242461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RicardGame$teste.coverage" NAME="teste Coverage Results" MODIFIED="1565097482853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Alien_Attack" />
+    <SUITE FILE_PATH="coverage/RicardGame$teste.coverage" NAME="teste Coverage Results" MODIFIED="1565098466941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Alien_Attack" />
     <SUITE FILE_PATH="coverage/RicardGame$Space_Invaders_Tutorial_1.coverage" NAME="Space-Invaders-Tutorial-1 Coverage Results" MODIFIED="1564843810187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tutorial" />
   </component>
   <component name="editorHistoryManager">
@@ -525,8 +510,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Alien_Attack/teste.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="365" column="11" selection-start-line="365" selection-start-column="11" selection-end-line="365" selection-end-column="11" />
+        <state relative-caret-position="495">
+          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
