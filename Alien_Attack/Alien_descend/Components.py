@@ -4,9 +4,9 @@ import Alien_Attack.LPS.Interfaces as int
 
 
 
-walkRight = [pygame.image.load('Game/ally.gif')]
-walkLeft = [pygame.image.load('Game/ally.gif')]
-char = pygame.image.load('Game/ally.gif')
+walkRight = [pygame.image.load('ally.gif')]
+walkLeft = [pygame.image.load('ally.gif')]
+char = pygame.image.load('ally.gif')
 
 class my_background(int.background):
     def __init__(self, screenwidth, screenheight):
@@ -83,7 +83,7 @@ class my_projectile(int.projectile):
         #pygame.draw.rect(win, self.color, self.hitbox, 2)
 
 class my_enemy(int.enemy):
-    enemySprite = [pygame.image.load('Game/invader.gif')]
+    enemySprite = [pygame.image.load('invader.gif')]
 
     def __init__(self, x, y, width, height, end):
         self.x = x

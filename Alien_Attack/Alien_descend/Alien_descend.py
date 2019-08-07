@@ -5,7 +5,7 @@ import Alien_Attack.Alien_descend.Components as comp
 pygame.init()
 
 
-bg = pygame.image.load('Game/space_invaders_background.gif')
+bg = pygame.image.load('space_invaders_background.gif')
 font = pygame.font.SysFont(None, 25)
 clock = pygame.time.Clock()
 
