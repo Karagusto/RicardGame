@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12dd315a-db35-4047-a4f7-ad22c8d049f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="6f88889a-9be4-4a6e-ab42-2ac0994c2e21" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/RicardGame$main.coverage" NAME="main Coverage Results" MODIFIED="1565043008620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Alien_Attack" />
-    <SUITE FILE_PATH="coverage/RicardGame$teste.coverage" NAME="teste Coverage Results" MODIFIED="1565043062032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Alien_Attack" />
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Alien_Attack/main.py">
+        <entry file="file://$PROJECT_DIR$/Alien_Attack/Alien_battle/Alien_battle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="123" column="55" selection-start-line="123" selection-start-column="55" selection-end-line="123" selection-end-column="55" />
+            <state relative-caret-position="225">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -28,33 +23,68 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Alien_Attack/teste.py">
+        <entry file="file://$PROJECT_DIR$/Alien_Attack/Alien_battle/Components.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Alien_Attack/player.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="44" />
+            <state relative-caret-position="363">
+              <caret line="105" column="110" selection-start-line="105" selection-start-column="110" selection-end-line="105" selection-end-column="110" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>walkRight</find>
+      <find>all_spr</find>
+      <find>all_sprites_list</find>
+      <find>goblin</find>
+      <find>end</find>
+      <find>invader</find>
+      <find>bullets</find>
+      <find>path</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/SpaceExplorer-0.31/image.py" />
+        <option value="$PROJECT_DIR$/SpaceExplorer-0.31/spacegame.py" />
+        <option value="$PROJECT_DIR$/scene2.py" />
+        <option value="$PROJECT_DIR$/scene3.py" />
+        <option value="$PROJECT_DIR$/scene4.py" />
+        <option value="$PROJECT_DIR$/scene5.py" />
+        <option value="$PROJECT_DIR$/Space-Invaders/space.py" />
+        <option value="$PROJECT_DIR$/scene1.py" />
+        <option value="$PROJECT_DIR$/scene6.py" />
+        <option value="$PROJECT_DIR$/scene7.py" />
+        <option value="$PROJECT_DIR$/Tutorial/Space-Invaders-Tutorial-1.py" />
+        <option value="$PROJECT_DIR$/Alien_Attack/backgnd.py" />
+        <option value="$PROJECT_DIR$/Alien_Attack/player.py" />
+        <option value="$PROJECT_DIR$/Alien_Attack/main.py" />
+        <option value="$PROJECT_DIR$/Alien_Attack/teste.py" />
+        <option value="$PROJECT_DIR$/Alien_Attack/Alien_descend/Components.py" />
+        <option value="$PROJECT_DIR$/Alien_Attack/Alien_descend/Alien_descend.py" />
+        <option value="$PROJECT_DIR$/Alien_Attack/Alien_battle/Alien_battle.py" />
+        <option value="$PROJECT_DIR$/Alien_Attack/Alien_battle/Components.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2348" />
+    <option name="y" value="24" />
+    <option name="width" value="1853" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -70,11 +100,65 @@
               <item name="RicardGame" type="b2602c69:ProjectViewProjectNode" />
               <item name="RicardGame" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="RicardGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RicardGame" type="462c0819:PsiDirectoryNode" />
+              <item name="Alien_Attack" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RicardGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RicardGame" type="462c0819:PsiDirectoryNode" />
+              <item name="Alien_Attack" type="462c0819:PsiDirectoryNode" />
+              <item name="Alien_battle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RicardGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RicardGame" type="462c0819:PsiDirectoryNode" />
+              <item name="Alien_Attack" type="462c0819:PsiDirectoryNode" />
+              <item name="Alien_descend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RicardGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RicardGame" type="462c0819:PsiDirectoryNode" />
+              <item name="SpaceExplorer-0.31" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RicardGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RicardGame" type="462c0819:PsiDirectoryNode" />
+              <item name="SpaceExplorer-0.31" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RicardGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RicardGame" type="462c0819:PsiDirectoryNode" />
+              <item name="SpaceExplorer-0.31" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="Pictures" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Alien_Attack/Alien_battle" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Alien_Attack/Alien_battle" />
+      <recent name="$PROJECT_DIR$/Alien_Attack/Alien_descend" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Alien_Attack/Alien_descend" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -88,8 +172,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.teste">
-    <configuration name="backgnd" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Alien_battle">
+    <configuration name="Alien_battle" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="RicardGame" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -97,12 +181,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Alien_Attack" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Alien_Attack/Alien_battle" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Alien_Attack/backgnd.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Alien_Attack/Alien_battle/Alien_battle.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -111,7 +195,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Alien_descend" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="RicardGame" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -119,12 +203,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Alien_Attack" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Alien_Attack/Alien_descend" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Alien_Attack/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Alien_Attack/Alien_descend/Alien_descend.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -133,7 +217,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="player" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Components (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="RicardGame" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -141,12 +225,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Alien_Attack" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Alien_Attack/Alien_battle" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Alien_Attack/player.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Alien_Attack/Alien_battle/Components.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -155,7 +239,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="scene2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Components" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="RicardGame" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -163,12 +247,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Alien_Attack/Alien_descend" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scene2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Alien_Attack/Alien_descend/Components.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -199,20 +283,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Python.backgnd" />
-      <item itemvalue="Python.main" />
-      <item itemvalue="Python.player" />
-      <item itemvalue="Python.scene2" />
-      <item itemvalue="Python.teste" />
-    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Alien_battle" />
+        <item itemvalue="Python.Components (1)" />
+        <item itemvalue="Python.Alien_descend" />
+        <item itemvalue="Python.Components" />
         <item itemvalue="Python.teste" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.backgnd" />
-        <item itemvalue="Python.player" />
-        <item itemvalue="Python.scene2" />
       </list>
     </recent_temporary>
   </component>
@@ -229,26 +306,31 @@
       <workItem from="1563904072152" duration="19109000" />
       <workItem from="1564165710944" duration="5876000" />
       <workItem from="1564585507052" duration="22854000" />
+      <workItem from="1565192281296" duration="94000" />
+      <workItem from="1565192376370" duration="5481000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="53414000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="1985" y="-4" width="2495" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19213313" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.101674154" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.19384615" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19469929" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32925585" />
       <window_info anchor="bottom" id="Python Console" order="12" />
@@ -261,7 +343,149 @@
       <window_info anchor="right" id="Database" order="6" />
     </layout>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/RicardGame$main.coverage" NAME="main Coverage Results" MODIFIED="1564862825076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Alien_Attack" />
+    <SUITE FILE_PATH="coverage/RicardGame$scene7.coverage" NAME="scene7 Coverage Results" MODIFIED="1564841748514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RicardGame$scene4.coverage" NAME="scene4 Coverage Results" MODIFIED="1563980112598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RicardGame$Components__1_.coverage" NAME="Components (1) Coverage Results" MODIFIED="1565213457363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Alien_Attack/Alien_battle" />
+    <SUITE FILE_PATH="coverage/RicardGame$spacegame.coverage" NAME="spacegame Coverage Results" MODIFIED="1563905374188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SpaceExplorer-0.31" />
+    <SUITE FILE_PATH="coverage/RicardGame$player.coverage" NAME="player Coverage Results" MODIFIED="1564855202054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Alien_Attack" />
+    <SUITE FILE_PATH="coverage/RicardGame$scene1.coverage" NAME="scene1 Coverage Results" MODIFIED="1564848823293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RicardGame$Alien_battle.coverage" NAME="Alien_battle Coverage Results" MODIFIED="1565213461510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Alien_Attack/Alien_battle" />
+    <SUITE FILE_PATH="coverage/RicardGame$backgnd.coverage" NAME="backgnd Coverage Results" MODIFIED="1564856636819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Alien_Attack" />
+    <SUITE FILE_PATH="coverage/RicardGame$scene2.coverage" NAME="scene2 Coverage Results" MODIFIED="1564848831811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RicardGame$Components.coverage" NAME="Components Coverage Results" MODIFIED="1565192574972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Alien_Attack/Alien_descend" />
+    <SUITE FILE_PATH="coverage/RicardGame$scene5.coverage" NAME="scene5 Coverage Results" MODIFIED="1564173585957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RicardGame$space.coverage" NAME="space Coverage Results" MODIFIED="1564586117008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Space-Invaders" />
+    <SUITE FILE_PATH="coverage/RicardGame$Alien_descend.coverage" NAME="Alien_descend Coverage Results" MODIFIED="1565192623582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Alien_Attack/Alien_descend" />
+    <SUITE FILE_PATH="coverage/RicardGame$scene3.coverage" NAME="scene3 Coverage Results" MODIFIED="1563915475650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RicardGame$scene6.coverage" NAME="scene6 Coverage Results" MODIFIED="1564841242461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RicardGame$teste.coverage" NAME="teste Coverage Results" MODIFIED="1564863336469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Alien_Attack" />
+    <SUITE FILE_PATH="coverage/RicardGame$Space_Invaders_Tutorial_1.coverage" NAME="Space-Invaders-Tutorial-1 Coverage Results" MODIFIED="1564843810187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tutorial" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/SpaceExplorer-0.31/image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2370">
+          <caret line="158" column="28" selection-start-line="158" selection-start-column="28" selection-end-line="158" selection-end-column="28" />
+          <folding>
+            <element signature="e#740#749#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpaceExplorer-0.31/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scene3.py" />
+    <entry file="file://$PROJECT_DIR$/scene4.py" />
+    <entry file="file://$PROJECT_DIR$/scene6.py" />
+    <entry file="file://$PROJECT_DIR$/Space-Invaders/space.py" />
+    <entry file="file://$PROJECT_DIR$/Tutorial/Space-Invaders-Tutorial-1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scene1.py" />
+    <entry file="file://$PROJECT_DIR$/scene2.py" />
+    <entry file="file://$PROJECT_DIR$/scene7.py" />
+    <entry file="file://$PROJECT_DIR$/scene5.py" />
+    <entry file="file://$PROJECT_DIR$/SpaceExplorer-0.31/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpaceExplorer-0.31/spacegame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2070">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#775#793#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Alien_Attack/backgnd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="89" column="16" selection-start-line="89" selection-end-line="89" selection-end-column="16" />
+          <folding>
+            <element signature="e#220#233#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Alien_Attack/player.py" />
+    <entry file="file://$PROJECT_DIR$/Alien_Attack/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="102" column="20" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Alien_Attack/teste.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Alien_Attack/Alien_descend/Components.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Alien_Attack/Alien_descend/Alien_descend.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-end-line="163" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Alien_Attack/Alien_battle/alien4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Alien_Attack/Alien_battle/Components.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="105" column="110" selection-start-line="105" selection-start-column="110" selection-end-line="105" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Alien_Attack/Alien_battle/Alien_battle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
