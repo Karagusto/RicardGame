@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f88889a-9be4-4a6e-ab42-2ac0994c2e21" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Alien_Attack/Alien_battle/Alien_battle.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Alien_Attack/Alien_battle/Components.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Alien_Attack/Alien_battle/alien4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Alien_Attack/Alien_battle/ally.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Alien_Attack/Alien_battle/index.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Alien_Attack/Alien_battle/invader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Alien_Attack/Alien_battle/space_invaders_background.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Alien_Attack/Alien_battle/starship.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6f88889a-9be4-4a6e-ab42-2ac0994c2e21" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Alien_Attack/Alien_battle/Alien_battle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="106" column="24" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
+            <state relative-caret-position="225">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -35,8 +25,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Alien_Attack/Alien_battle/Components.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-567">
-              <caret line="97" column="24" selection-start-line="97" selection-start-column="24" selection-end-line="97" selection-end-column="24" />
+            <state relative-caret-position="363">
+              <caret line="105" column="110" selection-start-line="105" selection-start-column="110" selection-end-line="105" selection-end-column="110" />
             </state>
           </provider>
         </entry>
@@ -85,8 +75,8 @@
         <option value="$PROJECT_DIR$/Alien_Attack/teste.py" />
         <option value="$PROJECT_DIR$/Alien_Attack/Alien_descend/Components.py" />
         <option value="$PROJECT_DIR$/Alien_Attack/Alien_descend/Alien_descend.py" />
-        <option value="$PROJECT_DIR$/Alien_Attack/Alien_battle/Components.py" />
         <option value="$PROJECT_DIR$/Alien_Attack/Alien_battle/Alien_battle.py" />
+        <option value="$PROJECT_DIR$/Alien_Attack/Alien_battle/Components.py" />
       </list>
     </option>
   </component>
@@ -317,12 +307,12 @@
       <workItem from="1564165710944" duration="5876000" />
       <workItem from="1564585507052" duration="22854000" />
       <workItem from="1565192281296" duration="94000" />
-      <workItem from="1565192376370" duration="5236000" />
+      <workItem from="1565192376370" duration="5481000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53169000" />
+    <option name="totallyTimeSpent" value="53414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1985" y="-4" width="2495" height="1084" extended-state="6" />
@@ -482,15 +472,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Alien_Attack/Alien_battle/Components.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-567">
-          <caret line="97" column="24" selection-start-line="97" selection-start-column="24" selection-end-line="97" selection-end-column="24" />
+        <state relative-caret-position="363">
+          <caret line="105" column="110" selection-start-line="105" selection-start-column="110" selection-end-line="105" selection-end-column="110" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Alien_Attack/Alien_battle/Alien_battle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="106" column="24" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
+        <state relative-caret-position="225">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
