@@ -24,7 +24,7 @@ class player(object):
         self.y = y
         self.width = width
         self.height = height
-        self.vel = 5
+        self.vel = 20
         self.isJump = False
         self.left = False
         self.right = False
@@ -71,7 +71,7 @@ class projectile(object):
         self.radius = radius
         self.color = color
         # self.facing = facing
-        self.vel = 8
+        self.vel = 10
         self.hitbox = (self.x - 20, self.y - 20, 20, 20)
 
     def draw(self, win):
@@ -90,7 +90,7 @@ class enemy(object):
         self.end = end
         self.path = [self.y, self.end]
         self.walkCount = 0
-        self.vel = 3
+        self.vel = 10
         self.hitbox = (self.x, self.y, self.width//2, self.height//2)
         self.health = 1
         self.visible = True
