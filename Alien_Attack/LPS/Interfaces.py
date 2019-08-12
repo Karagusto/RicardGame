@@ -66,3 +66,10 @@ class collision(ABC):
     @abstractmethod
     def  isCollidingBullet(self):
         pass
+
+
+# Classe que implementa a variabilidade dos meus jogos
+class regras(ABC):
+    @abstractmethod
+    def __init__(self):
+        pass

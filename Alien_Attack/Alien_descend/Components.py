@@ -154,12 +154,14 @@ class my_collision(int.collision):
         if self.hitbox[1] - self.hitbox[3] < self.projectile.y + self.projectile.radius and self.hitbox[1] + self.hitbox[3] > self.projectile.y:
             if self.hitbox[0] + self.hitbox[2] > self.projectile.x and self.hitbox[0] - self.hitbox[2] < self.projectile.x + self.projectile.radius:
                 return 0
-    #
-    # if lead_x > randAppleX and lead_x < randAppleX + AppleThickness or lead_x + block_size > randAppleX and lead_x + block_size < randAppleX + AppleThickness:
-    #     # print("x crossover")
-    #     if lead_y > randAppleY and lead_y < randAppleY + AppleThickness or lead_y + block_size > randAppleY and lead_y + block_size < randAppleY + AppleThickness:
 
 
+class my_regras2(int.regras):
 
-
-# bullet = projectile(round(man.x + man.width/2), man.y, 3, (255, 0, 0))
+    def __init__(self, win, man, goblin, bullets, score, isdead):
+        self.win = win
+        self.man = man
+        self.goblin = goblin
+        self.bullets = bullets
+        self.score = score
+        self.isdead = isdead

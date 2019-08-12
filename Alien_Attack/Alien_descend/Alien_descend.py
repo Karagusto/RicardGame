@@ -26,15 +26,15 @@ def message_to_screen(msg, color, bgnd, win):
     win.blit(textSurface, textRect)
 
 
-def redrawGameWindow(win, man, goblin, bullets, score, isdead):
-    win.blit(bg, (0, 0))
-    text = font.render('Score: ' + str(score), 1, (255, 255, 255))
-    win.blit(text, (390, 10))
-    man.draw(win)
-    goblin.draw(win)
+def redrawGameWindow(regras):
+    regras.win.blit(bg, (0, 0))
+    text = font.render('Score: ' + str(regras.score), 1, (255, 255, 255))
+    regras.win.blit(text, (390, 10))
+    regras.man.draw(regras.win)
+    regras.goblin.draw(regras.win)
 
-    for bullet in bullets:
-        bullet.draw(win)
+    for bullet in regras.bullets:
+        bullet.draw(regras.win)
     pygame.display.update()
 
 
@@ -155,7 +155,8 @@ def game_loop():
                 man.jumpCount = 10
 
         clock.tick(27)
-        redrawGameWindow(win, man, goblin, bullets, score, isdead)
+        regras = comp.my_regras2(win, man, goblin, bullets, score, isdead)
+        redrawGameWindow(regras)
 
     pygame.quit()
     quit()
